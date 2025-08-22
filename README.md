@@ -10,11 +10,11 @@ Perfect for GIS applications, map overlays, and non-linear image warping with hi
 [//]: # (![Demo]&#40;https://via.placeholder.com/800x400?text=Geo+Aligned+Image+Overlay+Demo&#41;  )
 
 Here's how the georeferenced image aligns perfectly with MapLibre:
-<div align=center>
-<video width="320" height="240" controls>
-<source src="public/differ.mp4" type="video/mp4">
-</video>
-</div>
+
+
+https://github.com/user-attachments/assets/0c52c8f5-ba81-4f44-a4ae-848dac5b4fa0
+
+
 *Video shows reprojection from EPSG:4326 to EPSG:3857 with corner alignment.*
 
 ## ✨ Features
