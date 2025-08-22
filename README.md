@@ -8,8 +8,11 @@ A **MapLibre GL JS** plugin that enables accurate overlay of georeferenced image
 Perfect for GIS applications, map overlays, and non-linear image warping with high visual fidelity.
 
 ![Demo](https://via.placeholder.com/800x400?text=Geo+Aligned+Image+Overlay+Demo)  
-*(Replace with actual screenshot or GIF in your repo)*
 
+
+Here's how the georeferenced image aligns perfectly with MapLibre:
+![Geo Aligned Image Overlay Demo](public/differ.mp4)
+*Video shows reprojection from EPSG:4326 to EPSG:3857 with corner alignment.*
 ---
 
 ## ✨ Features
@@ -27,4 +30,4 @@ Perfect for GIS applications, map overlays, and non-linear image warping with hi
 ## 📦 Installation
 
 ```bash
-npm install @qziov/maplibre-reprojected
+npm i @qziov/maplibre-reprojected
