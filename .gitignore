@@ -1,1 +1,23 @@
-/.idea
+# Build outputs
+/dist
+/coverage
+node_modules
+
+# IDE & OS
+.idea/
+.vscode/
+*.swp
+*~
+.DS_Store
+Thumbs.db
+
+# Logs
+logs
+*.log
+
+# Environment variables
+.env
+.env.local
+
+# Bundle Analysis
+.analyze.html

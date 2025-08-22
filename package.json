@@ -30,19 +30,19 @@
   "author": "qziov",
   "license": "MIT",
   "peerDependencies": {
-    "maplibre-gl": "^3.0.0"
+    "maplibre-gl": "^5.6.2"
   },
   "dependencies": {
-    "arrugator": "^0.3.0",
-    "twgl.js": "^4.21.0"
+    "arrugator": "^1.4.0",
+    "twgl.js": "^7.0.0"
   },
   "devDependencies": {
-    "typescript": "^5.0.0",
-    "rollup": "^3.29.4",
-    "@rollup/plugin-node-resolve": "^15.2.3",
+    "typescript": "^5.9.2",
+    "rollup": "^4.47.1",
+    "@rollup/plugin-node-resolve": "^16.0.1",
     "@rollup/plugin-terser": "^0.4.4",
-    "rollup-plugin-typescript2": "^0.34.0",
-    "maplibre-gl": "^3.3.0"
+    "rollup-plugin-typescript2": "^0.36.0",
+    "maplibre-gl": "^5.6.2"
   },
   "engines": {
     "node": ">=16"

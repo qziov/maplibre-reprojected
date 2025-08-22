@@ -1,5 +1,5 @@
 import maplibregl from 'maplibre-gl';
-import { GeoAlignedImageLayer } from '../dist/geo-aligned-image-layer';
+import { GeoAlignedImageLayer } from '../dist/index.js';
 
 new maplibregl.Map({``
     container: 'map',
