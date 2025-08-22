@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>MapLibre Reprojected Image Layer Demo</title>
 
-    <script src="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.js"></script>
-    <link href="https://unpkg.com/maplibre-gl@3.3.0/dist/maplibre-gl.css" rel="stylesheet" />
+    <script src="index.js"></script>
+    <script src="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl@5.6.2/dist/maplibre-gl.css" rel="stylesheet" />
 
     <style>
         body, html {
@@ -53,9 +54,7 @@
 </div>
 
 <!-- 构建后的库文件（开发时使用） -->
-<script type="module">
-    import { GeoAlignedImageLayer } from '../dist/index.js';
-
+<script >
     const map = new maplibregl.Map({
         container: 'map',
         style: 'https://demotiles.maplibre.org/style.json',
@@ -64,18 +63,18 @@
     });
 
     // 示例图像（可替换为真实地理图像）
-    const imageUrl = 'https://picsum.photos/800/600';
+    const imageUrl = 'WxFUSION_satdata_t110.png';
 
     // 四角坐标：tl, tr, br, bl
-    const coordinates = [
-        [-20, 20],   // top-left
-        [20, 20],    // top-right
-        [20, -20],   // bottom-right
-        [-20, -20]   // bottom-left
+    const coordinate = [
+        [90, 60],   // top-left     (左上)
+        [150, 60],  // top-right    (右上)
+        [150, 40],  // bottom-right (右下)
+        [90,40]// bottom-left
     ];
 
-    const imageLayer = new GeoAlignedImageLayer('geo-image', imageUrl, {
-        coordinates,
+    const imageLayer = new MapLibreReprojected.GeoAlignedImageLayer('geo-image', imageUrl, {
+        coordinates:coordinate,
         opacity: 0.8
     });
 

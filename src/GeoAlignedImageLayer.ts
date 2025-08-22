@@ -1,6 +1,5 @@
 import * as twgl from 'twgl.js';
 import { initArrugator } from './utils/initArrugator';
-import { MercatorCoordinate } from 'maplibre-gl';
 import { GeoAlignedImageLayerOptions, MapLibreRenderArgs } from './types';
 
 export class GeoAlignedImageLayer {
@@ -51,14 +50,14 @@ export class GeoAlignedImageLayer {
             const { pos, uv, trigs } = this.arrugado;
 
             this.bufferInfo = twgl.createBufferInfoFromArrays(gl, {
-                position: { numComponents: 2,  pos },
-                texcoord: { numComponents: 2,  uv },
+                position: { numComponents: 2,  data:pos },
+                texcoord: { numComponents: 2,  data:uv },
                 indices: trigs,
             });
 
             this.texture = twgl.createTexture(gl, {
                 src: image,
-                flipY: false,
+                flipY: 0,
                 min: gl.LINEAR,
                 mag: gl.LINEAR,
                 wrap: gl.CLAMP_TO_EDGE,
@@ -98,7 +97,7 @@ export class GeoAlignedImageLayer {
         };
     }
 
-    render(gl: WebGLRenderingContext, _matrix: any, args: MapLibreRenderArgs) {
+    render(gl: WebGLRenderingContext,args: MapLibreRenderArgs) {
         if (!this.ready || !this.programInfo || !this.texture) return;
         if (this.visibility === 'none') return;
 
@@ -124,7 +123,7 @@ export class GeoAlignedImageLayer {
         if (this.gl && this.map) {
             this.texture = twgl.createTexture(this.gl, {
                 src: url,
-                flipY: false,
+                flipY: 0,
                 min: this.gl.LINEAR,
                 mag: this.gl.LINEAR,
                 wrap: this.gl.CLAMP_TO_EDGE,

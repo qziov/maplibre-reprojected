@@ -9,12 +9,15 @@
     "strict": true,
     "declaration": true,
     "declarationMap": true,
-    "emitDeclarationOnly": true,
     "sourceMap": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "allowSyntheticDefaultImports": true,  // ✅ 允许 default import from CommonJS
+    "noEmit": false,              // ✅ 确保不启用 noEmit
+    "emitDeclarationOnly": false,  // ✅ 必须为 false！
+    "declarationDir": "./dist"
   },
   "include": ["src"]
 }

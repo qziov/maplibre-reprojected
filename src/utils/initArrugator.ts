@@ -1,5 +1,5 @@
 import Arrugator from 'arrugator';
-import { MercatorCoordinate } from 'maplibre-gl';
+declare const maplibregl: any;
 import { Position, ArrugadoOutput } from '../types';
 
 export function initArrugator(fromProj: string, coordinates: Position[]): {
@@ -33,7 +33,7 @@ export function initArrugator(fromProj: string, coordinates: Position[]): {
             console.error('Invalid coordinates:', coors);
             return [0, 0];
         }
-        const merc = MercatorCoordinate.fromLngLat({ lng, lat });
+        const merc = maplibregl.MercatorCoordinate.fromLngLat({ lng, lat });
         return [merc.x, merc.y];
     }
 
