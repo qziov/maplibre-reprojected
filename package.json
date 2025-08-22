@@ -2,20 +2,53 @@
   "name": "@qziov/maplibre-reprojected",
   "version": "1.0.0",
   "description": "A MapLibre GL JS plugin to load and reproject EPSG:4326 (WGS84) images into EPSG:3857 for accurate overlay alignment",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "npm run test"
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No test specified\" && exit 0"
   },
   "repository": {
     "type": "git",
-    "url": "http"
+    "url": "https://github.com/qziov/maplibre-reprojected.git"
   },
   "keywords": [
     "maplibre",
     "webgl",
     "reprojection",
-    "overlay"
+    "overlay",
+    "georeferencing",
+    "image-layer",
+    "gis"
   ],
   "author": "qziov",
-  "license": "ISC"
+  "license": "MIT",
+  "peerDependencies": {
+    "maplibre-gl": "^3.0.0"
+  },
+  "dependencies": {
+    "arrugator": "^0.3.0",
+    "twgl.js": "^4.21.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "rollup": "^3.29.4",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-terser": "^0.4.4",
+    "rollup-plugin-typescript2": "^0.34.0",
+    "maplibre-gl": "^3.3.0"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "homepage": "https://github.com/qziov/maplibre-reprojected#readme",
+  "bugs": {
+    "url": "https://github.com/qziov/maplibre-reprojected/issues"
+  }
 }
