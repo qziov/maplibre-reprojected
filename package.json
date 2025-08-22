@@ -1,0 +1,21 @@
+{
+  "name": "@qziov/maplibre-reprojected",
+  "version": "1.0.0",
+  "description": "A MapLibre GL JS plugin to load and reproject EPSG:4326 (WGS84) images into EPSG:3857 for accurate overlay alignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http"
+  },
+  "keywords": [
+    "maplibre",
+    "webgl",
+    "reprojection",
+    "overlay"
+  ],
+  "author": "qziov",
+  "license": "ISC"
+}
